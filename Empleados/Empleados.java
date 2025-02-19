@@ -22,7 +22,7 @@ public class Empleados {
 	}
 	
 	public String toString() {
-		return nombre + ":" + "\t";
+		return nombre + ":" + "\t" + pagoTotal + "\t" + genero;
 	}
 
 	public void setNombre(String nombre) {
