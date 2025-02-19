@@ -6,6 +6,10 @@ public class Empresa {
 		System.out.println("Cantidad de empleados a consultar: ");
 		int n = scan.nextInt();
 		Empleados[] empleados = new Empleados[n];
+		for(int i=0; i<n; i++) {
+			empleados[i] = new Empleados();
+		}
+		
 		datosEmpleados(empleados, n);
 
 	}
