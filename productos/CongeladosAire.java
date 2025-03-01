@@ -10,7 +10,7 @@ public class CongeladosAire extends Congelados{
 		
 	}
 
-	public CongeladosAire(String caducidad, String lote, String pais, String envasado, String temp, int nitrogeno, int oxigeno, int carbono, int vapor) {
+	public CongeladosAire(String lote, String envasado, String pais, String caducidad, String temp, int nitrogeno, int oxigeno, int carbono, int vapor) {
 		super(caducidad, lote, pais, envasado, temp);
 		Nitrogeno = nitrogeno;
 		Oxigeno = oxigeno;
@@ -18,7 +18,7 @@ public class CongeladosAire extends Congelados{
 		Vapor = vapor;
 	}
 	public String ToString() {
-		return super.ToString();
+		return super.ToString() + "\t" + Nitrogeno + "\t" + Oxigeno + "\t" + Carbono + "\t" + Vapor;
 	}
 	public int getNitrogeno() {
 		return Nitrogeno;

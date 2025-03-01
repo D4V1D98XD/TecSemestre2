@@ -8,13 +8,13 @@ public class CongeladosAgua extends Congelados{
 		
 	}
 
-	public CongeladosAgua(String caducidad, String lote, String pais, String envasado, String temp, String salinidad) {
+	public CongeladosAgua(String lote, String envasado, String pais, String caducidad, String temp, String salinidad) {
 		super(caducidad, lote, pais, envasado, temp);
 		Salinidad = salinidad;
 	}
 
 	public String ToString() {
-		return super.ToString() + "/t" + Salinidad;
+		return super.ToString() + "\t" + Salinidad;
 	}
 	
 	public String getSalinidad() {

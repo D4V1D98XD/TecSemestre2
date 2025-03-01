@@ -8,7 +8,7 @@ public class Congelados extends Productos{
 		
 	}
 
-	public Congelados(String caducidad, String lote, String pais, String envasado, String temp) {
+	public Congelados(String lote, String envasado, String pais, String caducidad, String temp) {
 		super(caducidad, lote, pais, envasado);
 		temperatura = temp;
 	}
@@ -22,7 +22,7 @@ public class Congelados extends Productos{
 	}
 	
 	public String ToString() {
-		return super.ToString() + "/t" + temperatura;
+		return super.ToString() + "\t" + temperatura;
 	}
 	
 	

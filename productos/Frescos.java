@@ -6,7 +6,7 @@ public class Frescos extends Productos{
 		
 	}
 
-	public Frescos(String caducidad, String lote, String pais, String envasado) {
+	public Frescos(String lote, String envasado, String pais, String caducidad) {
 		super(caducidad, lote, pais, envasado);
 	}
 

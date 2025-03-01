@@ -11,7 +11,7 @@ public class Productos {
 		
 	}
 
-	public Productos(String caducidad, String lote, String pais, String envasado) {
+	public Productos(String lote, String envasado, String pais, String caducidad) {
 		
 		this.caducidad = caducidad;
 		this.lote = lote;
@@ -52,7 +52,7 @@ public class Productos {
 	}
 
 	public String ToString() {
-		return lote + "/t" + Envasado + "/t" + caducidad + "/t" + pais;
+		return lote + "\t" + Envasado + "\t" + pais + "\t" + caducidad;
 	}
 	
 	
