@@ -77,6 +77,11 @@ public class Alumno extends Persona{
 	public void setPromedio(double promedio) {
 		Promedio = promedio;
 	}
+
+	public double getPromedio() {
+		return Promedio;
+	}
+
 	
 	
 
