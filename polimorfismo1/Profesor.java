@@ -1,4 +1,6 @@
-package polimorfismo;
+package polimorfismo1;
+
+import java.util.Random;
 
 public class Profesor extends Persona{
 
@@ -25,8 +27,16 @@ public class Profesor extends Persona{
 		Materia = materia;
 	}
 
-	public void Asistencia() {
-			
+	public boolean Asistencia(Profesor[] p) {
+		Random random = new Random();
+		boolean asistencia;
+		int asis = random.nextInt(5);
+		if(asis == 0) {
+			asistencia = false;
+		}else {
+			asistencia = true;
+		}
+		return asistencia;
 	}
 
 }

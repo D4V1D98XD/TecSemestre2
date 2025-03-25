@@ -1,4 +1,4 @@
-package polimorfismo;
+package polimorfismo1;
 
 public abstract class Persona {
 
@@ -14,7 +14,7 @@ public abstract class Persona {
 		Genero = genero;
 	}
 
-	public abstract void Asistencia();
+	public abstract void Asistencia(Estudiante[] e);
 	
 	public String ToString() {
 		return Nombre + Edad + Genero;
