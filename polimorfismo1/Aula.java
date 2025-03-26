@@ -17,7 +17,7 @@ public class Aula{
 	}
 
 	public String ToString() {
-		return numAula + numAlumno + Materia;
+		return numAula+"\t" + numAlumno +"\t" + Materia;
 	}
 	
 	public int getNumAula() {

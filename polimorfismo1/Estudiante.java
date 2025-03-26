@@ -16,7 +16,7 @@ public class Estudiante extends Persona{
 	}
 
 	public String ToString() {
-		return super.ToString() + Calificacion;
+		return super.ToString() +"\t" + Calificacion;
 	}
 
 	public int getCalificacion() {
@@ -35,19 +35,11 @@ public class Estudiante extends Persona{
 		Asistencia = asistencia;
 	}
 
-	public void Asistencia(Estudiante[] e, Profesor[] p) {
+	public boolean Asistencia() {
 		Random random = new Random();
-		boolean asistencia;
-		int asis = 0;
-		for(int i=0; i<e.length; i++) {
-			asis = random.nextInt(2);
-			if(asis == 0) {
-				asistencia = false;
-			}else {
-				asistencia = true;
-			}
-			e[i].setAsistencia(asistencia);
-		}
+		boolean Asistencia = random.nextBoolean();
+		
+		return Asistencia;
 	}
 
 

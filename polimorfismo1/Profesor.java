@@ -18,7 +18,7 @@ public class Profesor extends Persona{
 	}
 
 	public String ToString() {
-		return super.ToString() + Materia;
+		return super.ToString() +"\t" + Materia+"\t" +Asistencia;
 	}
 	
 	public String getMateria() {
@@ -36,19 +36,17 @@ public class Profesor extends Persona{
 		Asistencia = asistencia;
 	}
 
-	public void Asistencia(Estudiante[] e, Profesor[] p) {
+	public boolean Asistencia() {
 		Random random = new Random();
 		boolean asistencia;
 		int asis = 0;
-		for(int i=0; i<e.length; i++) {
-			asis = random.nextInt(5);
-			if(asis == 0) {
-				asistencia = false;
-			}else {
-				asistencia = true;
-			}
-			p[i].setAsistencia(asistencia);
+		asis = random.nextInt(5);
+		if(asis == 0) {
+			asistencia = false;
+		}else {
+			asistencia = true;
 		}
+		return asistencia;
 	}
 
 }

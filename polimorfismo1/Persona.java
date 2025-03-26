@@ -14,10 +14,10 @@ public abstract class Persona {
 		Genero = genero;
 	}
 
-	public abstract void Asistencia(Estudiante[] e, Profesor[] p);
+	public abstract boolean Asistencia();
 	
 	public String ToString() {
-		return Nombre + Edad + Genero;
+		return Nombre +"\t" + Edad +"\t" + Genero;
 	}
 	
 	public String getNombre() {

@@ -7,7 +7,7 @@ public class Salon {
 		int n = random.nextInt(10, 21);
 		
 		Estudiante[] estudiante = new Estudiante[n];
-		Profesor[] profesor = new Profesor[10];
+		Profesor[] profesor = new Profesor[n];
 		Aula[] aula = new Aula[2];
 		
 		for(int i=0; i<n; i++) {
@@ -17,16 +17,22 @@ public class Salon {
 			profesor[i] = new Profesor();
 		}
 		generarDatos(profesor, estudiante, aula);
-		estudiante[0].Asistencia(estudiante, profesor);
-		profesor[0].Asistencia(estudiante, profesor);
 
+	}
+	
+	public  static void imprimirAulas(Profesor[] p, Estudiante[] e, Aula[] a) {
+		System.out.println("TECNOLOGICO DE CULIACAN");
+		System.out.println("=====================================");
+		for(int i=0; i<i; i++) {
+			System.out.println();
+		}
 	}
 
 	public static void generarDatos(Profesor[] p, Estudiante[] e, Aula[] a) {
 		Random random = new Random();
-		
+		boolean asistencia = false;
 		String[] nombres = {"Dandi","Jesus","L30","Cachora","Maghuire","Erik","Perez","Adrian","Hommey","Barbero","Elee"};
-		String [] profesores = {"Lopez","Acosta","Aldo","Beatriz","Ibarra","Rochin","Edmundo","Maru","Chino","Heras", "Dire"};
+		String [] profesores = {"Lopez","Acosta","Aldo","Beatriz","Ibarra","Rochin","Edmundo","Maru","Chino","Heras", "Selene"};
 		String[] materias = {"PROGRAMACION", "CONTABILIDAD", "QUIMICA"};
 		char[] generos = {'M', 'F'};
 		
@@ -36,7 +42,8 @@ public class Salon {
 		
 		int namePos = 0;
 		String nombre = " ";
-		
+		int edad = 0;
+		int calificacion = 0;
 		int genrePos = 0;
 		char genero = ' ';
 		
@@ -47,11 +54,10 @@ public class Salon {
 			nombre = nombres[namePos];
 			genrePos = random.nextInt(2);
 			genero = generos[genrePos];
-
-			e[i].setNombre(nombre);
-			e[i].setGenero(genero);
-			e[i].setEdad(random.nextInt(17, 30));
-			e[i].setCalificacion(random.nextInt(0, 101));
+			edad = random.nextInt(17, 30);
+			calificacion = random.nextInt(101);
+			asistencia = e[i].Asistencia();
+			e[i] = new Estudiante(nombre, edad, genero, calificacion, asistencia);
 		}
 		
 		for(int i=0; i<p.length; i++) {
@@ -61,19 +67,18 @@ public class Salon {
 			profesor = profesores[namePos];
 			materiaPos = random.nextInt(3);
 			materia = materias[materiaPos];
-			p[i].setMateria(materia);
-			p[i].setNombre(profesor);
-			p[i].setGenero(genero);
-			p[i].setEdad(random.nextInt(30, 81));
+			edad = random.nextInt(30, 81);
+			asistencia = p[i].Asistencia();
+			p[i] = new Profesor(profesor, edad, genero, materia, asistencia);
 		}
 		
 		for(int i=0; i<a.length; i++) {
 			numAula = random.nextInt(1, 10);
 			materiaPos = random.nextInt(3);
 			materia = materias[materiaPos];
-			a[i].setMateria(materia);
-			a[i].setNumAlumno(e.length);
-			a[i].setNumAula(numAula);
+			int numAlumno = e.length;
+			a[i] = new Aula(numAula, numAlumno, materia);
+
 		}
 	}
 	
