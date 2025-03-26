@@ -35,7 +35,7 @@ public class Estudiante extends Persona{
 		Asistencia = asistencia;
 	}
 
-	public void Asistencia(Estudiante[] e) {
+	public void Asistencia(Estudiante[] e, Profesor[] p) {
 		Random random = new Random();
 		boolean asistencia;
 		int asis = 0;
@@ -46,9 +46,8 @@ public class Estudiante extends Persona{
 			}else {
 				asistencia = true;
 			}
+			e[i].setAsistencia(asistencia);
 		}
-		
-		
 	}
 
 

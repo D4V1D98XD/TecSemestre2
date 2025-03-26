@@ -14,7 +14,7 @@ public abstract class Persona {
 		Genero = genero;
 	}
 
-	public abstract void Asistencia(Estudiante[] e);
+	public abstract void Asistencia(Estudiante[] e, Profesor[] p);
 	
 	public String ToString() {
 		return Nombre + Edad + Genero;
