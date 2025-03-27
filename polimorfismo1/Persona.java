@@ -17,7 +17,7 @@ public abstract class Persona {
 	public abstract boolean Asistencia();
 	
 	public String ToString() {
-		return Nombre +"\t" + Edad +"\t" + Genero;
+		return Nombre +"\t" +"\t"+ Edad +"\t" + Genero;
 	}
 	
 	public String getNombre() {

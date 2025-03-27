@@ -16,7 +16,13 @@ public class Estudiante extends Persona{
 	}
 
 	public String ToString() {
-		return super.ToString() +"\t" + Calificacion;
+		String asis = " ";
+		if(Asistencia == true) {
+			asis = "Asistio";
+		}else {
+			asis = "no asistio";
+		}
+		return super.ToString() +"\t" + Calificacion+"\t" +"\t" + asis;
 	}
 
 	public int getCalificacion() {
