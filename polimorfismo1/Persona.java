@@ -1,3 +1,4 @@
+
 package polimorfismo1;
 
 public abstract class Persona {

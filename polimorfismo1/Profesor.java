@@ -18,7 +18,13 @@ public class Profesor extends Persona{
 	}
 
 	public String ToString() {
-		return super.ToString() +"\t" + Materia+"\t" +Asistencia;
+		String asis = " ";
+		if(Asistencia == true) {
+			asis = "Asistio";
+		}else {
+			asis = "no asistio";
+		}
+		return super.ToString() +"\t" + Materia+"\t" +asis;
 	}
 	
 	public String getMateria() {
