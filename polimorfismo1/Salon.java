@@ -1,7 +1,8 @@
 package polimorfismo1;
 import java.util.*;
 public class Salon {
-
+		//GARCIA LEYVA LEONARDO DAVID
+		//GASTELUM MEDINA JESUS ARMANDO
 	public static void main(String[] args) {
 		Random random = new Random();
 		int n = random.nextInt(10, 21);
