@@ -76,7 +76,7 @@ public class crearArchivo {
 		int opcion = 0;
 		System.out.println("Que es lo que desea hacer?");
 		System.out.println();
-		System.out.println("1.- Crear una carpeta");
+		System.out.println("1.- Seleccionar una carpeta");
 		System.out.println("2.- Crear un archivo");
 		System.out.println("3.- Leer un archivo");
 		System.out.println("4.- Borrar un archivo");
