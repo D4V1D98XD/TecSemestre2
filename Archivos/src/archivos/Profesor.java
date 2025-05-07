@@ -2,18 +2,24 @@ package archivos;
 import java.io.*;
 public class Profesor extends Persona implements Serializable{
 
-	private int Sueldo;
-	private int Tipo;// ( 1=Completo, 2=Medio, 3=Parcial )
-	private int Especialidad; // (1=licenciatura, 2=maestria ó 3=doctorado)
-	public Profesor() 
-	{
+	private int Sueldo; // mensual
+	private int Tipo;// (B= de Base, E= Eventual)
+	private int Departamento; // (1-5) 
+	private String FechaIngreso;
+	private int Aguinaldo;
+	
+	public Profesor() {
 		super();
 	}
-	public Profesor(String name, int age, String sex, int sueldo, int tipo, int especialidad) {
+	
+	
+	public Profesor(String name, int age, String sex, int sueldo, int tipo, int departamento, String fechaIngreso, int aguinaldo) {
 		super(age, name, sex);
 		Sueldo = sueldo;
 		Tipo = tipo;
-		Especialidad = especialidad;
+		Departamento = departamento;
+		FechaIngreso = fechaIngreso;
+		Aguinaldo = aguinaldo;
 		
 	}
 	public int getSueldo() {
@@ -28,11 +34,23 @@ public class Profesor extends Persona implements Serializable{
 	public void setTipo(int tipo) {
 		Tipo = tipo;
 	}
-	public int getEspecialidad() {
-		return Especialidad;
+	public int getDepartamento() {
+		return Departamento;
 	}
-	public void setEspecialidad(int especialidad) {
-		Especialidad = especialidad;
+	public void setDepartamento(int departamento) {
+		Departamento = departamento;
+	}
+	public String getFechaIngreso() {
+		return FechaIngreso;
+	}
+	public void setFechaIngreso(String fechaIngreso) {
+		FechaIngreso = fechaIngreso;
+	}
+	public int getAguinaldo() {
+		return Aguinaldo;
+	}
+	public void setAguinaldo(int aguinaldo) {
+		Aguinaldo = aguinaldo;
 	}	
 	
 	

@@ -93,27 +93,29 @@ public class crearArchivo {
 		try {
 			oos = new ObjectOutputStream(new FileOutputStream(Archivo));
 			//es una clase de java que se encarga de convertir los datos en bytes
-			String nombre, genero;
-			int edad, sueldo, tipo, especialidad;
+			String nombre, genero, fechaIngreso;
+			int edad, sueldo, departamento, aguinaldo;
+			char tipo;
 			
 			do{
 		    	System.out.print("Nombre: "); nombre = scan.next();
 		    	System.out.print("Edad: "); edad = scan.nextInt();
 		    	System.out.print("Genero(M/F): "); genero = scan.next();
-		    	System.out.print("Sueldo: "); sueldo= scan.nextInt();
+		    	System.out.print("Sueldo: "); sueldo= scan.nextInt(); //Mensual
+		    	System.out.print("Dias de Aguinaldo: "); aguinaldo= scan.nextInt();
+		    	System.out.print("Fecha de Ingreso: "); fechaIngreso = scan.next();
 		    	
 		    	do{
-		        	System.out.print("Tipo de nombramiento (1=completo, 2= medio ó 3=parcial): ");
-		        	tipo= scan.nextInt();
-		        }while(tipo<1 || tipo>3); 
+		        	System.out.print("Tipo de Empleado  (B= de Base, E= Eventual): "); //(B= de Base, E= Eventual) 
+		        	tipo= scan.next().charAt(0);
+		        }while(tipo == 'E' || tipo == 'B'); 
 		        
 		    	do{
-		        	System.out.print("Especialidad (1=licenciatura, 2=maestria ó 3=doctorado): ");
-		        	especialidad= scan.nextInt();
-		        }while(especialidad<1 || especialidad>3);
+		        	System.out.print("Numero de Departamento: (1-5): ");
+		        	departamento= scan.nextInt();
+		        }while(departamento<1 || departamento>5);
 		        
-		        oos.writeObject(new Profesor(nombre, edad, genero, sueldo, tipo, especialidad)); //crea el objeto profesor
-		        System.out.println("     ARCHIVO GENEADO CON EXITO!");
+		        oos.writeObject(new Profesor(nombre, edad, genero, sueldo, tipo, departamento, fechaIngreso, aguinaldo)); //crea el objeto profesor		        System.out.println("     ARCHIVO GENEADO CON EXITO!");
 		        System.out.println("=======================================");
 		        System.out.println("Desea crear otro archivo? (s/n): ");
 		        respuesta = scan.next();
