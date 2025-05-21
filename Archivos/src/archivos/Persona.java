@@ -1,48 +1,45 @@
 package archivos;
-import java.io.*;
+import java.io.Serializable;
 public abstract class Persona implements Serializable{
 
-	protected int Age;
-	protected String Name;
-	protected String Sex;
+	private int Edad;
+	private String Nombre;
+	private char Genero;
 	
 	public Persona(){
 		
 	}
-	
-	public Persona(int age, String name, String sex) {
-		super();
-		Age = age;
-		Name = name;
-		Sex = sex;
+
+	public Persona(int edad, String nombre, char genero) {
+		Edad = edad;
+		Nombre = nombre;
+		Genero = genero;
 	}
 
-	public int getAge() {
-		return Age;
+	public int getEdad() {
+		return Edad;
 	}
 
-	public void setAge(int age) {
-		Age = age;
+	public void setEdad(int edad) {
+		Edad = edad;
 	}
 
-	public String getName() {
-		return Name;
+	public String getNombre() {
+		return Nombre;
 	}
 
-	public void setName(String name) {
-		Name = name;
+	public void setNombre(String nombre) {
+		Nombre = nombre;
 	}
 
-	public String getSex() {
-		return Sex;
+	public char getGenero() {
+		return Genero;
 	}
 
-	public void setSex(String sex) {
-		Sex = sex;
+	public void setGenero(char genero) {
+		Genero = genero;
 	}
-	
-	public void quienPersona() {
-		System.out.println("nombre: "+ Name + " Edad: " + Age + " Sexo: " + Sex);
+	public void quienSoy() {
+		System.out.println("Soy "+ Nombre + " Tengo "+ Edad + "Años");
 	}
-	
 }
