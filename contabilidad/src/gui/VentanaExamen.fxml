@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VentanaExamenController">
+   <children>
+      <Label layoutX="271.0" layoutY="14.0" text="EXAMEN" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="46.0" prefHeight="21.0" prefWidth="311.0" text="1.- SE HACEN 3 COMPRAS, SE EXPIDE UN CHEQUE" />
+      <Label layoutX="15.0" layoutY="138.0" prefHeight="21.0" prefWidth="169.0" text="2.- SE PAGA INTERESES DE" />
+      <Label layoutX="14.0" layoutY="180.0" prefHeight="21.0" prefWidth="200.0" text="3.- SE COMPRAN 2 ARTICULOS" />
+      <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="228.0" prefHeight="21.0" prefWidth="540.0" text="4.- VENDIMOS ARTICULOS, DETERMINE EL COSTO UTILIZANDO EL METODO QUE DESEE" />
+      <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="291.0" prefHeight="21.0" prefWidth="608.0" text="5.- SE AMORTIZAN LOS ACTIVOS DIFERIDOS, SE DESCARGA LA GASTO 50% AREA DE VENTA Y" />
+      <Label layoutX="14.0" layoutY="321.0" text=" 50% AREA DE ADMON" />
+      <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="351.0" prefHeight="21.0" prefWidth="608.0" text="6.- DETERMINAR LA UTILIDAD O PERDIDA Y TRASLADELA AL CAPITAL CONTABLE" />
+      <Button fx:id="BtIniciar" layoutX="522.0" layoutY="347.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="79.0" text="Iniciar" />
+      <Button fx:id="BtLibroMayor" layoutX="14.0" layoutY="394.0" mnemonicParsing="false" onAction="#ventanaLibroMayor" prefHeight="30.0" prefWidth="85.0" text="Libro Mayor" />
+      <Button fx:id="BtEstadoResultados" layoutX="356.0" layoutY="394.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="145.0" text="Estado de Resultados" />
+      <Button fx:id="BtTicketAlmacen" layoutX="114.0" layoutY="394.0" mnemonicParsing="false" onAction="#VentanaTicketAlmacen" prefHeight="30.0" prefWidth="135.0" text="Ticket de Almacen" />
+      <Button fx:id="BtLibroDiario" layoutX="258.0" layoutY="394.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" text="Libro Diario" />
+      <Button fx:id="BtComprobacion" layoutX="507.0" layoutY="394.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="108.0" text="Comprobacion" />
+      <Button fx:id="BtBalanceFinal" layoutX="237.0" layoutY="435.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="135.0" text="Balance Final" />
+      <TextField fx:id="TbArt1Compra" layoutX="15.0" layoutY="93.0" prefHeight="26.0" prefWidth="85.0" promptText="Compra art 1" />
+      <TextField fx:id="TbArt1Cant" layoutX="127.0" layoutY="93.0" prefHeight="26.0" prefWidth="72.0" promptText="Cant art 1" />
+      <TextField fx:id="TbArt2Compra" layoutX="216.0" layoutY="93.0" prefHeight="26.0" prefWidth="85.0" promptText="Compra art 2" />
+      <TextField fx:id="TbArt2Cant" layoutX="320.0" layoutY="93.0" prefHeight="26.0" prefWidth="72.0" promptText="Cant art 2" />
+      <TextField fx:id="TbArt3Compra" layoutX="419.0" layoutY="93.0" prefHeight="26.0" prefWidth="91.0" promptText="Compra art 3" />
+      <TextField fx:id="TbArt3Cant" layoutX="523.0" layoutY="93.0" prefHeight="26.0" prefWidth="72.0" promptText="Cant art 3" />
+      <TextField fx:id="TbInteres" layoutX="195.0" layoutY="136.0" prefHeight="26.0" prefWidth="85.0" promptText="Interes" />
+      <TextField fx:id="TbArt1Compra1" layoutX="214.0" layoutY="178.0" prefHeight="26.0" prefWidth="85.0" promptText="Compra art 1" />
+      <TextField fx:id="TbArt1Cant1" layoutX="326.0" layoutY="178.0" prefHeight="26.0" prefWidth="72.0" promptText="Cant art 1" />
+      <TextField fx:id="TbArt2Compra1" layoutX="415.0" layoutY="178.0" prefHeight="26.0" prefWidth="85.0" promptText="Compra art 2" />
+      <TextField fx:id="TbArt2Cant1" layoutX="519.0" layoutY="178.0" prefHeight="26.0" prefWidth="72.0" promptText="Cant art 2" />
+      <TextField fx:id="TbArt1Venta" layoutX="35.0" layoutY="257.0" prefHeight="26.0" prefWidth="85.0" promptText="Venta art 1" />
+      <TextField fx:id="TbArt1CantVenta" layoutX="147.0" layoutY="257.0" prefHeight="26.0" prefWidth="72.0" promptText="Cant art 1" />
+      <TextField fx:id="TbAmortizacion" layoutX="178.0" layoutY="317.0" prefHeight="26.0" prefWidth="91.0" promptText="Amortizacion" />
+      <Button fx:id="BtMenuInicial" layoutX="535.0" layoutY="23.0" mnemonicParsing="false" onAction="#regresarMenuInicial" text="Regresar" />
+   </children>
+</Pane>
