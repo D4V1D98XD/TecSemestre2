@@ -157,6 +157,14 @@ public class VentanaExamenController {
     
     public void iniciarExamen(ActionEvent event) {
         try {
+        	
+        	FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/VentanaMetodoVenta.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Metodo de venta");
+            stage.show();
+            VentanaMetodoVentaController metodoVenta = new VentanaMetodoVentaController();
             int[] entradas = {
                 Integer.parseInt(TbArt1Cant.getText()),
                 Integer.parseInt(TbArt2Cant.getText()),
@@ -206,9 +214,15 @@ public class VentanaExamenController {
                         "-", "-", 0
                     );
                     DatosCompartidos.listaTickets.add(ticket);
+                    double peps = MetodosInventario.calcularPEPS(DatosCompartidos.listaTickets, salida);
+                    double ueps = MetodosInventario.calcularUEPS(DatosCompartidos.listaTickets, salida);
+                    double promedio = MetodosInventario.calcularPromedioPonderado(DatosCompartidos.listaTickets, salida);
+
                 }
             }
+        
             
+        
         } catch (Exception e) {
             e.printStackTrace();
         }

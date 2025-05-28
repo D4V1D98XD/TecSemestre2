@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane fx:id="LbBancoDebe" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="57.0" layoutY="42.0" text="Balanza de comprobacion de 1 de Enero  al 31 de Diciembre del 2018" />
+      <Label layoutX="57.0" layoutY="17.0" text="Los Ortegas SA de CV  " />
+      <Label layoutX="57.0" layoutY="71.0" text="Moneda Nacional" />
+      <Label layoutX="57.0" layoutY="104.0" text="Concepto" />
+      <Label layoutX="189.0" layoutY="104.0" prefHeight="17.0" prefWidth="62.0" text="Debe" />
+      <Label layoutX="302.0" layoutY="104.0" text="Haber" />
+      <Label layoutX="418.0" layoutY="104.0" text="Deudor" />
+      <Label layoutX="539.0" layoutY="104.0" text="Acreedor" />
+      <Label layoutX="56.0" layoutY="146.0" text="Banco" />
+      <Label layoutX="56.0" layoutY="179.0" text="DOC X cobrar" />
+      <Label layoutX="58.0" layoutY="211.0" text="Papeleria" />
+      <Label layoutX="55.0" layoutY="237.0" text="Primas de seguros" />
+      <Label layoutX="59.0" layoutY="262.0" text="Almacen" />
+      <Label layoutX="55.0" layoutY="290.0" text="Proveedores" />
+      <Label layoutX="53.0" layoutY="316.0" text="Acreedores diversos" />
+      <Label layoutX="55.0" layoutY="340.0" text="PTU X pagar" />
+      <Label layoutX="59.0" layoutY="364.0" text="IMP X Pagar ISR " />
+      <Label layoutX="59.0" layoutY="388.0" text="Capital Contable" />
+      <Label layoutX="65.0" layoutY="414.0" text="Sumas Iguales" />
+      <Label fx:id="LbBancoDebe" layoutX="189.0" layoutY="146.0" text="Label" />
+      <Label fx:id="LbProveeHaber" layoutX="304.0" layoutY="290.0" text="Label" />
+      <Label fx:id="LbAlmacenDebe" layoutX="189.0" layoutY="262.0" text="Label" />
+      <Label fx:id="LbPrimasDebe" layoutX="189.0" layoutY="237.0" text="Label" />
+      <Label fx:id="LbPapeDebe" layoutX="189.0" layoutY="211.0" text="Label" />
+      <Label fx:id="LbDOCDeudor" layoutX="424.0" layoutY="179.0" text="Label" />
+      <Label fx:id="LbDOCDebe" layoutX="189.0" layoutY="179.0" text="Label" />
+      <Label fx:id="LbBancoDeudor" layoutX="424.0" layoutY="148.0" text="Label" />
+      <Label fx:id="LbBancoHaber" layoutX="304.0" layoutY="148.0" text="Label" />
+      <Label fx:id="LbPapeHaber" layoutX="304.0" layoutY="211.0" text="Label" />
+      <Label fx:id="LbIMPHaber" layoutX="304.0" layoutY="364.0" text="Label" />
+      <Label fx:id="LbPTUHaber" layoutX="304.0" layoutY="340.0" text="Label" />
+      <Label fx:id="LbAcrediHaber" layoutX="304.0" layoutY="316.0" text="Label" />
+      <Label fx:id="LbProveeAcreedor" layoutX="539.0" layoutY="290.0" text="Label" />
+      <Label fx:id="LbPrimasDeudor" layoutX="424.0" layoutY="237.0" text="Label" />
+      <Label fx:id="LbPapeDeudor" layoutX="424.0" layoutY="211.0" text="Label" />
+      <Label fx:id="LbPrimasHaber" layoutX="304.0" layoutY="237.0" text="Label" />
+      <Label fx:id="LbAlmacenHaber" layoutX="302.0" layoutY="262.0" prefHeight="17.0" prefWidth="32.0" text="Label" />
+      <Label fx:id="LbAlmacenDeudor" layoutX="424.0" layoutY="262.0" text="Label" />
+      <Label fx:id="LbCCHaber" layoutX="304.0" layoutY="388.0" text="Label" />
+      <Label fx:id="LbAcrediAcreedor" layoutX="539.0" layoutY="316.0" text="Label" />
+      <Label fx:id="LbIMPAcreedor" layoutX="539.0" layoutY="364.0" text="Label" />
+      <Label fx:id="LbPTUAcreedor" layoutX="539.0" layoutY="341.0" text="Label" />
+      <Label fx:id="LbCCAcreedor" layoutX="539.0" layoutY="388.0" text="Label" />
+      <Label fx:id="Lbsuma4" layoutX="539.0" layoutY="414.0" text="Label" />
+      <Label fx:id="Lbsuma3" layoutX="424.0" layoutY="414.0" text="Label" />
+      <Label fx:id="Lbsuma2" layoutX="304.0" layoutY="414.0" text="Label" />
+      <Label fx:id="Lbsuma1" layoutX="189.0" layoutY="414.0" text="Label" />
+      <Label layoutX="133.0" layoutY="484.0" text="Fima del propietario" />
+      <Label layoutX="424.0" layoutY="484.0" text="Firma del gerente" />
+   </children>
+</Pane>

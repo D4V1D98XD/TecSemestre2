@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="56.0" layoutY="31.0" text="Los Ortega SA de CV" />
+      <Label layoutX="56.0" layoutY="62.0" text="Balance General del 1 de Enero al 31 de Diciembre del 2018" />
+      <Label layoutX="66.0" layoutY="72.0" />
+      <Label layoutX="300.0" layoutY="23.0" text="Moneda Nacional" />
+      <Label layoutX="61.0" layoutY="96.0" text="Activo" />
+      <Label layoutX="53.0" layoutY="122.0" text="Activo Circulante" />
+      <Label layoutX="61.0" layoutY="150.0" text="Banco" />
+      <Label layoutX="48.0" layoutY="175.0" text="Doc X Cobrar" />
+      <Label layoutX="51.0" layoutY="205.0" text="Activo Fijo" />
+      <Label layoutX="50.0" layoutY="242.0" text="Almacen" />
+      <Label layoutX="38.0" layoutY="272.0" text="Activo Diferido" />
+      <Label layoutX="48.0" layoutY="299.0" text="Papeleria" />
+      <Label layoutX="32.0" layoutY="335.0" text="Prima De Seguro" />
+      <Label layoutX="41.0" layoutY="368.0" text="Total Activo" />
+      <Label layoutX="44.0" layoutY="405.0" text="Pasivo" />
+      <Label layoutX="21.0" layoutY="441.0" text="Pasivo Circulante" />
+      <Label layoutX="33.0" layoutY="472.0" text="Proveedores" />
+      <Label layoutX="23.0" layoutY="499.0" text="Acreedores diversos" />
+      <Label layoutX="38.0" layoutY="531.0" text="PTU Por Pagar" />
+      <Label layoutX="41.0" layoutY="561.0" text="IMP X Pagar ISR" />
+      <Label layoutX="51.0" layoutY="595.0" text="Total Pasivo" />
+      <Label layoutX="52.0" layoutY="630.0" text="Capital Contable" />
+      <Label layoutX="199.0" layoutY="150.0" />
+      <Label layoutX="357.0" layoutY="686.0" text="Firma del gerente" />
+      <Label layoutX="131.0" layoutY="683.0" text="Firma del propietario" />
+      <Label fx:id="LbBanco" layoutX="214.0" layoutY="150.0" text="Label" />
+      <Label fx:id="Lb2sumaAC" layoutX="347.0" layoutY="175.0" text="Label" />
+      <Label fx:id="Lb1Prim" layoutX="214.0" layoutY="335.0" text="Label" />
+      <Label fx:id="LbPape" layoutX="214.0" layoutY="299.0" text="Label" />
+      <Label fx:id="LbAlmacen" layoutX="347.0" layoutY="242.0" text="Label" />
+      <Label fx:id="LbCC" layoutX="485.0" layoutY="630.0" text="Label" />
+      <Label fx:id="Lb1Doc" layoutX="214.0" layoutY="175.0" text="Label" />
+      <Label fx:id="LbTotalP" layoutX="485.0" layoutY="595.0" text="Label" />
+      <Label fx:id="LbsumaAD" layoutX="347.0" layoutY="335.0" prefHeight="17.0" prefWidth="28.0" text="Label" />
+      <Label fx:id="LbTotalA" layoutX="485.0" layoutY="368.0" text="Label" />
+      <Label fx:id="LbPTU" layoutX="210.0" layoutY="531.0" text="Label" />
+      <Label fx:id="LbIMP" layoutX="210.0" layoutY="561.0" text="Label" />
+      <Label fx:id="LbAcreedores" layoutX="210.0" layoutY="499.0" text="Label" />
+      <Label fx:id="Lbproveedor" layoutX="210.0" layoutY="463.0" text="Label" />
+   </children>
+</Pane>
