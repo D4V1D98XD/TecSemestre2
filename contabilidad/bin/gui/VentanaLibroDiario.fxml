@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="794.0" prefWidth="600.0" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VentanaLibroDiarioController">
+  <content>
+    <AnchorPane maxHeight="1000.0" minHeight="0.0" minWidth="0.0" prefHeight="582.0" prefWidth="586.0">
+         <children>
+            <Label layoutX="220.0" layoutY="14.0" prefHeight="17.0" prefWidth="147.0" text="Los Ortegas SA de CV" AnchorPane.bottomAnchor="527.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="14.0" />
+            <Label layoutX="37.0" layoutY="31.0" text="Libro Diario" />
+            <Label layoutX="37.0" layoutY="73.0" text="Concepto" />
+            <Label layoutX="37.0" layoutY="105.0" text="Banco" />
+            <Label layoutX="37.0" layoutY="130.0" text="DOC X Pagar" />
+            <Label layoutX="37.0" layoutY="153.0" text="Papeleria" />
+            <Label layoutX="37.0" layoutY="178.0" text="Primas de seguros" />
+            <Label layoutX="38.0" layoutY="225.0" text="Acreedores Hipotecarios" />
+            <Label layoutX="37.0" layoutY="251.0" text="Capital Contable" />
+            <Label layoutX="264.0" layoutY="73.0" text="Debe" />
+            <Label layoutX="407.0" layoutY="73.0" text="Haber" />
+            <Label layoutX="247.0" layoutY="105.0" text="125,245,524" />
+            <Label layoutX="247.0" layoutY="130.0" text="3,552,548" />
+            <Label layoutX="245.0" layoutY="153.0" text="854,221" />
+            <Label layoutX="37.0" layoutY="202.0" text="Proveedores" />
+            <Label layoutX="396.0" layoutY="202.0" text="10,045,211" />
+            <Label layoutX="396.0" layoutY="225.0" text="965,241" />
+            <Label layoutX="396.0" layoutY="251.0" text="119,129,362" />
+            <Label fx:id="Lb1uno" layoutX="37.0" layoutY="301.0" text="Almacen" />
+            <Label fx:id="Lb1dos" layoutX="47.0" layoutY="318.0" text="Banco" />
+            <Label fx:id="Lb2uno" layoutX="37.0" layoutY="341.0" text="2-Gastos y productos" />
+            <Label fx:id="Lb2dos" layoutX="47.0" layoutY="358.0" text="Banco" />
+            <Label fx:id="Lb3uno" layoutX="37.0" layoutY="384.0" text="3-Almacen" />
+            <Label fx:id="Lb1DebeAlm" layoutX="245.0" layoutY="301.0" text="Label" />
+            <Label fx:id="Lb1HaberAlm" layoutX="393.0" layoutY="301.0" text="Label" />
+            <Label fx:id="Lb1DebeBan" layoutX="245.0" layoutY="318.0" text="Label" />
+            <Label fx:id="Lb1HaberBan1" layoutX="393.0" layoutY="318.0" text="Label" />
+            <Label fx:id="Lb2DebeGastos" layoutX="245.0" layoutY="341.0" text="Label" />
+            <Label fx:id="Lb2HaberGastos" layoutX="393.0" layoutY="341.0" text="Label" />
+            <Label fx:id="Lb2DebeBan" layoutX="245.0" layoutY="358.0" text="Label" />
+            <Label fx:id="Lb2HaberBan" layoutX="393.0" layoutY="358.0" text="Label" />
+            <Label fx:id="Lb3DebeAlm" layoutX="245.0" layoutY="384.0" text="Label" />
+            <Label fx:id="Lb3HaberAlm" layoutX="393.0" layoutY="384.0" text="Label" />
+            <Label fx:id="Lb3dos" layoutX="47.0" layoutY="401.0" text="Proveedores" />
+            <Label fx:id="Lb3DebePro" layoutX="245.0" layoutY="401.0" text="Label" />
+            <Label fx:id="Lb3HaberPro" layoutX="393.0" layoutY="401.0" text="Label" />
+            <Label fx:id="Lb4uno" layoutX="40.0" layoutY="431.0" text="4-Banco" />
+            <Label fx:id="Lb4DebeBan" layoutX="245.0" layoutY="431.0" text="Label" />
+            <Label fx:id="Lb4HaberBan" layoutX="393.0" layoutY="431.0" text="Label" />
+            <Label fx:id="Lb4DebeVen" layoutX="245.0" layoutY="448.0" text="Label" />
+            <Label fx:id="Lb4HaberVen" layoutX="393.0" layoutY="448.0" text="Label" />
+            <Label fx:id="Lb4dos" layoutX="52.0" layoutY="448.0" text="Venta" />
+            <Label fx:id="Lb4tres" layoutX="39.0" layoutY="465.0" text="4A-Costo de Venta" />
+            <Label fx:id="Lb4DebeCos" layoutX="245.0" layoutY="465.0" text="Label" />
+            <Label fx:id="Lb4HaberCos" layoutX="393.0" layoutY="465.0" text="Label" />
+            <Label fx:id="Lb4Cuatro" layoutX="57.0" layoutY="482.0" text="Almacen" />
+            <Label fx:id="Lb4DebeAlm" layoutX="245.0" layoutY="482.0" text="Label" />
+            <Label fx:id="Lb4HaberAlm" layoutX="393.0" layoutY="482.0" text="Label" />
+            <Label fx:id="Lb5uno" layoutX="40.0" layoutY="514.0" text="5-Papeleria" />
+            <Label fx:id="Lb5dos" layoutX="51.0" layoutY="528.0" text="Primas de cargo" />
+            <Label fx:id="Lb5DebePape" layoutX="245.0" layoutY="514.0" text="Label" />
+            <Label fx:id="Lb5DebePrim" layoutX="245.0" layoutY="528.0" text="Label" />
+            <Label fx:id="LbHaberPape" layoutX="393.0" layoutY="514.0" text="Label" />
+            <Label fx:id="Lb5HaberPape" layoutX="393.0" layoutY="528.0" text="Label" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

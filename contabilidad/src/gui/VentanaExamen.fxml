@@ -20,11 +20,11 @@
       <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="291.0" prefHeight="21.0" prefWidth="608.0" text="5.- SE AMORTIZAN LOS ACTIVOS DIFERIDOS, SE DESCARGA LA GASTO 50% AREA DE VENTA Y" />
       <Label layoutX="14.0" layoutY="321.0" text=" 50% AREA DE ADMON" />
       <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="351.0" prefHeight="21.0" prefWidth="608.0" text="6.- DETERMINAR LA UTILIDAD O PERDIDA Y TRASLADELA AL CAPITAL CONTABLE" />
-      <Button fx:id="BtIniciar" layoutX="522.0" layoutY="347.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="79.0" text="Iniciar" />
+      <Button fx:id="BtIniciar" layoutX="522.0" layoutY="347.0" mnemonicParsing="false" onAction="#iniciarExamen" prefHeight="30.0" prefWidth="79.0" text="Iniciar" />
       <Button fx:id="BtLibroMayor" layoutX="14.0" layoutY="394.0" mnemonicParsing="false" onAction="#ventanaLibroMayor" prefHeight="30.0" prefWidth="85.0" text="Libro Mayor" />
       <Button fx:id="BtEstadoResultados" layoutX="356.0" layoutY="394.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="145.0" text="Estado de Resultados" />
       <Button fx:id="BtTicketAlmacen" layoutX="114.0" layoutY="394.0" mnemonicParsing="false" onAction="#VentanaTicketAlmacen" prefHeight="30.0" prefWidth="135.0" text="Ticket de Almacen" />
-      <Button fx:id="BtLibroDiario" layoutX="258.0" layoutY="394.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" text="Libro Diario" />
+      <Button fx:id="BtLibroDiario" layoutX="258.0" layoutY="394.0" mnemonicParsing="false" onAction="#libroDiario" prefHeight="30.0" prefWidth="85.0" text="Libro Diario" />
       <Button fx:id="BtComprobacion" layoutX="507.0" layoutY="394.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="108.0" text="Comprobacion" />
       <Button fx:id="BtBalanceFinal" layoutX="237.0" layoutY="435.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="135.0" text="Balance Final" />
       <TextField fx:id="TbArt1Compra" layoutX="15.0" layoutY="93.0" prefHeight="26.0" prefWidth="85.0" promptText="Compra art 1" />

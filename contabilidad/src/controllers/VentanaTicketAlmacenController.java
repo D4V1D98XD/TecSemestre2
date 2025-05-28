@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import application.TicketAlmacen;
+import application.DatosCompartidos;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -88,5 +90,12 @@ public class VentanaTicketAlmacenController implements Initializable{
 		
 		ColSaldo.setCellValueFactory(new PropertyValueFactory<>("saldo"));
 		ColSaldo.setStyle("-fx-alignment: CENTER-LEFT");
+		
+		TabTicketAlmacen.setItems(DatosCompartidos.listaTickets);
+	}
+	
+	public void agregarDatosATabla(ObservableList<TicketAlmacen> lista) {
+	    ticketAlmacen.setAll(lista); // Asignamos los datos
+	    TabTicketAlmacen.setItems(ticketAlmacen); // Mostramos en la tabla
 	}
 }

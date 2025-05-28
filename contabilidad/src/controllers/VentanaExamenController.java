@@ -1,7 +1,12 @@
 package controllers;
 
+import application.DatosExamen;
+import application.TicketAlmacen;
+import application.DatosCompartidos;
 import java.io.IOException;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -83,7 +88,6 @@ public class VentanaExamenController {
     @FXML
     void regresarMenuInicial(ActionEvent event) {
     	try {
-            // Volver a cargar la ventana inicial
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/VentanaInicial.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
@@ -91,7 +95,6 @@ public class VentanaExamenController {
             stage.setTitle("Ventana Inicial");
             stage.show();
 
-            // Cerrar la ventana actual
             ((Stage) BtMenuInicial.getScene().getWindow()).close();
 
         } catch (IOException e) {
@@ -104,7 +107,6 @@ public class VentanaExamenController {
     
     public void ventanaLibroMayor(ActionEvent event) {
     	try {
-            // Volver a cargar la ventana inicial
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/VentanaLibroMayor.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
@@ -112,7 +114,6 @@ public class VentanaExamenController {
             stage.setTitle("Libro Mayor");
             stage.show();
 
-            // Cerrar la ventana actual
             ((Stage) BtMenuInicial.getScene().getWindow()).close();
 
         } catch (IOException e) {
@@ -121,7 +122,6 @@ public class VentanaExamenController {
     }
     
     public void VentanaTicketAlmacen(ActionEvent event) {
-    	// Volver a cargar la ventana inicial
     	try {
 	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/VentanaTicketAlmacen.fxml"));
 	        Parent root = loader.load();
@@ -130,7 +130,6 @@ public class VentanaExamenController {
 	        stage.setTitle("Ticket de Almacen");
 	        stage.show();
 	
-	        // Cerrar la ventana actual
 	        ((Stage) BtMenuInicial.getScene().getWindow()).close();
 
     	}
@@ -139,4 +138,80 @@ public class VentanaExamenController {
     	}
     }
     
+    public void libroDiario(ActionEvent event) {
+    	try {
+	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/VentanaLibroDiario.fxml"));
+	        Parent root = loader.load();
+	        Stage stage = new Stage();
+	        stage.setScene(new Scene(root));
+	        stage.setTitle("Ticket de Almacen");
+	        stage.show();
+	
+	        ((Stage) BtMenuInicial.getScene().getWindow()).close();
+
+    	}
+    	catch (IOException e) {
+    		e.printStackTrace();
+    	}
+    }
+    
+    public void iniciarExamen(ActionEvent event) {
+        try {
+            int[] entradas = {
+                Integer.parseInt(TbArt1Cant.getText()),
+                Integer.parseInt(TbArt2Cant.getText()),
+                Integer.parseInt(TbArt3Cant.getText()),
+                Integer.parseInt(TbArt1Cant1.getText()),
+                Integer.parseInt(TbArt2Cant1.getText())
+            };
+
+            int salida = Integer.parseInt(TbArt1CantVenta.getText());
+            int[] existencias = DatosExamen.calcularExistencias(entradas, salida);
+
+            int[] adquisiciones = {
+            		Integer.parseInt(TbArt1Compra.getText()),
+                    Integer.parseInt(TbArt2Compra.getText()),
+                    Integer.parseInt(TbArt3Compra.getText()),
+                    Integer.parseInt(TbArt1Compra1.getText()),
+                    Integer.parseInt(TbArt2Compra1.getText())
+            };
+            
+            // Limpia y guarda los datos en la lista compartida
+            DatosCompartidos.listaTickets.clear();
+
+            for (int i = 0; i < entradas.length; i++) {
+                int entrada = entradas[i];
+
+                // Última fila = la venta
+                if (i == entradas.length - 1) {
+                    int existenciaFinal = existencias[i] - salida;
+
+                    TicketAlmacen ticket = new TicketAlmacen(
+                        "",                                      // Entrada vacía
+                        String.valueOf(salida),                 // Salida real
+                        String.valueOf(existenciaFinal),        // Existencia final real
+                        "-", "-", "-", "-", 0
+                    );
+                    DatosCompartidos.listaTickets.add(ticket);
+                } else {
+                    double adquisicion = adquisiciones[i];
+                    double debe = entrada * adquisicion;
+
+                    TicketAlmacen ticket = new TicketAlmacen(
+                        String.valueOf(entrada),
+                        "0",                                     // No hay salida
+                        String.valueOf(existencias[i]),
+                        String.format("%.2f", adquisicion),
+                        String.format("%.2f", debe),
+                        "-", "-", 0
+                    );
+                    DatosCompartidos.listaTickets.add(ticket);
+                }
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
