@@ -44,58 +44,58 @@ public class VentanaTicketAlmacenController implements Initializable{
 	private TableColumn<application.TicketAlmacen, String> ColHaber;
 	@FXML
 	private TableColumn<application.TicketAlmacen, String> ColSaldo;
-	
+
 	private ObservableList<application.TicketAlmacen> ticketAlmacen = FXCollections.observableArrayList();
-	
+
 	public void Regresar(ActionEvent event) {
 		try {
-	        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/VentanaExamen.fxml"));
-	        Parent root = loader.load();
-	        Stage stage = new Stage();
-	        stage.setScene(new Scene(root));
-	        stage.setTitle("Menu Examen");
-	        stage.show();
-	
-	        // Cerrar la ventana actual
-	        ((Stage) BtRegresar.getScene().getWindow()).close();
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/VentanaExamen.fxml"));
+			Parent root = loader.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root));
+			stage.setTitle("Menu Examen");
+			stage.show();
 
-    	}
-    	catch (IOException e) {
-    		e.printStackTrace();
-    	}
+			// Cerrar la ventana actual
+			((Stage) BtRegresar.getScene().getWindow()).close();
+
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-	
+
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		ColEntradas.setCellValueFactory(new PropertyValueFactory<>("entrada"));
 		ColEntradas.setStyle("-fx-alignment: CENTER-LEFT");
-		
+
 		ColSalidas.setCellValueFactory(new PropertyValueFactory<>("salida"));
 		ColSalidas.setStyle("-fx-alignment: CENTER-LEFT");
-		
+
 		ColExistencia.setCellValueFactory(new PropertyValueFactory<>("existencia"));
 		ColExistencia.setStyle("-fx-alignment: CENTER-LEFT");
-		
+
 		ColAdquision.setCellValueFactory(new PropertyValueFactory<>("adquisicion"));
 		ColAdquision.setStyle("-fx-alignment: CENTER-LEFT;");
-		
+
 		ColPromedio.setCellValueFactory(new PropertyValueFactory<>("promedio"));
 		ColPromedio.setStyle("-fx-alignment: CENTER-LEFT;");
-		
+
 		ColDebe.setCellValueFactory(new PropertyValueFactory<>("debe"));
 		ColDebe.setStyle("-fx-alignment: CENTER-LEFT");
-		
+
 		ColHaber.setCellValueFactory(new PropertyValueFactory<>("haber"));
 		ColHaber.setStyle("-fx-alignment: CENTER-LEFT");
-		
+
 		ColSaldo.setCellValueFactory(new PropertyValueFactory<>("saldo"));
 		ColSaldo.setStyle("-fx-alignment: CENTER-LEFT");
-		
+
 		TabTicketAlmacen.setItems(DatosCompartidos.listaTickets);
 	}
-	
+
 	public void agregarDatosATabla(ObservableList<TicketAlmacen> lista) {
-	    ticketAlmacen.setAll(lista); // Asignamos los datos
-	    TabTicketAlmacen.setItems(ticketAlmacen); // Mostramos en la tabla
+		ticketAlmacen.setAll(lista); // Asignamos los datos
+		TabTicketAlmacen.setItems(ticketAlmacen); // Mostramos en la tabla
 	}
 }

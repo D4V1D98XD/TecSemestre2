@@ -214,9 +214,9 @@ public class VentanaExamenController {
                         "-", "-", 0
                     );
                     DatosCompartidos.listaTickets.add(ticket);
-                    double peps = MetodosInventario.calcularPEPS(DatosCompartidos.listaTickets, salida);
-                    double ueps = MetodosInventario.calcularUEPS(DatosCompartidos.listaTickets, salida);
-                    double promedio = MetodosInventario.calcularPromedioPonderado(DatosCompartidos.listaTickets, salida);
+                    double peps = DatosExamen.calcularPEPS(DatosCompartidos.listaTickets, salida);
+                    double ueps = DatosExamen.calcularUEPS(DatosCompartidos.listaTickets, salida);
+                    double promedio = DatosExamen.calcularPromedioPonderado(DatosCompartidos.listaTickets, salida);
 
                 }
             }
